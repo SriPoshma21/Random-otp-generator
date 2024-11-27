@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OTP Generator</title>
+    <style>
+        body{
+            background-image: url("https://go4mobility.com/wp-content/uploads/2020/11/post_linkedin_wholesale_go4_swonkie_blog.png");
+            background-size: 100% 100%;
+            background-repeat: no-repeat;
+            height: 60vh;
+        }
+        #parent{
+            background-color: rgba(20, 20, 120, 0.571);
+            border-radius: 5px;
+            width: 350px;
+            padding: 50px;
+            margin-top: 250px;
+            margin-left: 5%;
+            box-shadow: 2px 10px 10px black;
+        }
+        #heading{
+            color:whitesmoke;
+            margin-top: -40px;
+        }
+        #btn{
+           margin-left: 140px;
+           padding: 10px;
+           border-style: none;
+           border-radius: 5px;
+           font-size: large;
+           font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+           color: white;
+           background-color: navy;
+        }
+        #result{
+            margin-left: 60px;
+            padding: 5px;
+            font-size: large;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div id="parent">
+     <h1 id="heading">Random OTP Generator</h1>
+     <input type="text" id="result"><br><br>
+     <button id="btn">Generate</button>
+    </div>
+    <!------------------script--------------------- -->
+    <script>
+    let result=document.getElementById("result");
+    let btn=document.getElementById("btn");
+    
+    btn.addEventListener("click",()=> result.value=Math.round(Math.random()*10000));
+
+    </script>
+</body>
+</html>
